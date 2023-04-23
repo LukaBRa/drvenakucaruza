@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Italiana&family=Roboto:wght@300&display=swap');
+:root{
+    --primary: #231f1e;
+    --secondary: #01e29e;
+    --light-brown: #f5f1ee;
+    --dark-red: #8b514c;
+    --roboto-font: "Roboto";
+    --italiana-font: "Italiana";
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto";
+}
+
+.nav-background{
+    background-color: var(--primary);
+}

@@ -1,0 +1,40 @@
+
+:root{
+    --secondary: #01e29e;
+}
+
+.slider{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-indicator{
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.slider-indicator:hover{
+    color: var(--secondary);
+}
+
+.slider-right-indicator{
+    right: 0%;
+}
+
+@media only screen and (max-width: 950px) {
+    .slider{
+        width: 100%;
+        height: 40vh;
+        margin-top: 1rem;
+    }
+  }

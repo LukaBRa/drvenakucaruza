@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/nav-footer.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/carousel.css">
 </head>
 <body>
     
@@ -19,7 +20,7 @@
                 <a href="#" class="website-logo"><img src="images/general/logo.PNG" alt="Drvena kuca Ruza" width="80" height="80"></a>
                 <ul>
                     <li><a href="#">POČETNA</a></li>
-                    <li><a href="">APARTMANI</a></li>
+                    <li><a href="apartmani.html">APARTMANI</a></li>
                     <li><a href="">SPA</a></li>
                     <li><a href="">KONTAKT</a></li>
                     <li><a href="">LOKACIJA</a></li>
@@ -189,70 +190,217 @@
             </div>
 
             <div class="button-row mt-5">
-                <button>I</button>
-                <button class="active">II</button>
-                <button>III</button>
-                <button>IV</button>
+                <button class="active apartman-btn button-1">I</button>
+                <button class="apartman-btn button-2" >II</button>
+                <button class="apartman-btn button-3">III</button>
+                <button class="apartman-btn button-4">IV</button>
             </div>
 
             <div class="row mt-5 pb-5">
                 <div class="col-lg-6 col-12">
-                    <p class="apartman-povrsina">100 m<sup>2</sup></p>
-                    <div class="apartman-row">
-                        <p>Smestajni kapacitet 6+2</p>
+                    <div class="apartman-1">
+                        <p class="apartman-povrsina">100 m<sup>2</sup></p>
+                        <div class="apartman-row">
+                            <p>Smeštajni kapacitet 6+2</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Dnevni boravak, 3 sobe, 3 terase, kupatilo i wc</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>2 x <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/50/000000/external-bed-furniture-kiranshastry-solid-kiranshastry.png" width="40" height="40">
+                               2 x <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/50/000000/external-bed-furniture-kiranshastry-solid-kiranshastry-1.png" width="40" height="40">
+                               1 x <img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-sofa-furniture-kmg-design-glyph-kmg-design.png" width="30" height="30">
+                            </p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Komplet opremljena kuhinja</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Smart TV (dnevni boravak / spavaća soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Kablovska TV (dnevni boravak / spavaća soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>WiFi</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Individualno kontrolisano grejanje + kamin</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Bademantili, papuče, peškiri</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Toaleterije, fen za kosu, kozmetičko ogledalo</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Korišćenje SPA centra (parno kupatilo, đakuzi, sauna, slana soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Besplatan parking pokriven video nadzorom</p>
+                        </div>
+                        <a href="#" class="detaljnije mt-5">DETALJNIJE</a>
                     </div>
-                    <div class="apartman-row">
-                        <p>Dnevni boravak, 3 sobe, 3 terase, kupatilo i wc</p>
+
+                    <div class="apartman-2" style="display: none;">
+                        <p class="apartman-povrsina">100 m<sup>2</sup></p>
+                        <div class="apartman-row">
+                            <p>Smeštajni kapacitet 6+2</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Dnevni boravak, 3 sobe, 3 terase, kupatilo i wc</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>
+                                3 x <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/50/000000/external-bed-furniture-kiranshastry-solid-kiranshastry.png" width="40" height="40">
+                                1 x <img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-sofa-furniture-kmg-design-glyph-kmg-design.png" width="30" height="30">
+                            </p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Komplet opremljena kuhinja</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Smart TV (dnevni boravak / spavaća soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Kablovska TV (dnevni boravak / spavaća soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>WiFi</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Individualno kontrolisano grejanje + kamin</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Bademantili, papuče, peškiri</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Toaleterije, fen za kosu, kozmetičko ogledalo</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Korišćenje SPA centra (parno kupatilo, đakuzi, sauna, slana soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Besplatan parking pokriven video nadzorom</p>
+                        </div>
+                        <a href="#" class="detaljnije mt-5">DETALJNIJE</a>
                     </div>
-                    <div class="apartman-row">
-                        <p>Komplet opremljena kuhinja</p>
+
+                    <div class="apartman-3" style="display: none;">
+                        <p class="apartman-povrsina">42 m<sup>2</sup></p>
+                        <div class="apartman-row">
+                            <p>Smeštajni kapacitet 4</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Dnevni boravak, 1 soba, kupatilo</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>
+                                1 x <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/50/000000/external-bed-furniture-kiranshastry-solid-kiranshastry.png" width="40" height="40">,
+                                1 x <img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-sofa-furniture-kmg-design-glyph-kmg-design.png" width="30" height="30"> (francuski + ugaona garnitura na razvlačenje)
+                            </p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Komplet opremljena kuhinja</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Smart TV (dnevni boravak / spavaća soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Kablovska TV (dnevni boravak / spavaća soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>WiFi</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Individualno kontrolisano grejanje + kamin</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Bademantili, papuče, peškiri</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Toaleterije, fen za kosu, kozmetičko ogledalo</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Korišćenje SPA centra (parno kupatilo, đakuzi, sauna, slana soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Besplatan parking pokriven video nadzorom</p>
+                        </div>
+                        <a href="#" class="detaljnije mt-5">DETALJNIJE</a>
                     </div>
-                    <div class="apartman-row">
-                        <p>Smart TV (dnevni boravak / spavaća soba)</p>
+
+                    <div class="apartman-4" style="display: none;">
+                        <p class="apartman-povrsina">24 m<sup>2</sup></p>
+                        <div class="apartman-row">
+                            <p>Smeštajni kapacitet 3</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>1 prostorija, kupatilo</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>
+                                1 x <img src="https://img.icons8.com/ios-glyphs/30/000000/sofa.png" width="30" height="30">,
+                                1 x <img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-sofa-furniture-kmg-design-glyph-kmg-design.png" width="30" height="30"> (fotelja na razvlačenje + ugaona garnitura na razvlačenje)
+                            </p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Komplet opremljena kuhinja</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Smart TV (dnevni boravak / spavaća soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Kablovska TV (dnevni boravak / spavaća soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>WiFi</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Individualno kontrolisano grejanje + kamin</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Bademantili, papuče, peškiri</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Toaleterije, fen za kosu, kozmetičko ogledalo</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Korišćenje SPA centra (parno kupatilo, đakuzi, sauna, slana soba)</p>
+                        </div>
+                        <div class="apartman-row">
+                            <p>Besplatan parking pokriven video nadzorom</p>
+                        </div>
+                        <a href="#" class="detaljnije mt-5">DETALJNIJE</a>
+                    </div>
+                    
+                    </div>
+                    <div class="col-lg-6 col-12 mt-lg-0 mt-sm-5 mt-5">
+                        <img src="images/pocetna/plan.PNG" alt="Plan">
                     </div>
                 </div>
-                <div class="col-lg-6 col-12">
-                    <img src="images/pocetna/plan.PNG" alt="Plan">
-                </div>
-                <a href="#" class="detaljnije">DETALJNIJE</a>
             </div>
             
         </div>
     </section>
 
     <section>
-        <div class="container-md pt-5 pb-5">
+        <div class="container-md pb-5">
             <div class="text-center pt-5 pb-5">
                 <p class="accent mb-4 fw-bold">SLIKE I VIDEO SNIMCI</p>
                 <h1>RUŽIN ALBUM</h1>
             </div>
 
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/album/1.JPG" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="images/album/2.JPG" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="images/album/3.jpg" alt="Third slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
+            <!-- Carousel -->
+            
+            <div class="ccarousel">
+
+                <button id="left-indicator" class="indicator"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="right-indicator" class="indicator indicator-right"><i class="fa-solid fa-chevron-right"></i></button>
+
+            </div>
+            
+            <!--End of carousel-->
 
         </div>
     </section>
@@ -278,5 +426,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script/bootstrap.min.js"></script>
+    <script src="script/carousel.js"></script>
+    <script src="script/apartmani-plan.js"></script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --secondary: #01e29e;
+}
+
+.ccarousel{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+/*     background-image: url("../images/album/1.JPG");
+ */    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.indicator{
+    position: absolute;
+    top: 50%;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.indicator:hover{
+    color: var(--secondary);
+}
+
+.indicator-right{
+    right: 0%;
+}

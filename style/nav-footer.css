@@ -48,6 +48,7 @@ ul li a:hover{
 footer{
     background-color: var(--primary);
     color: white;
+    padding-bottom: 2rem;
 }
 
 .footer-link{
