@@ -25,7 +25,7 @@ body{
 header{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/pocetna/4.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(../images/pocetna/4.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -57,6 +57,14 @@ header{
     color: white;
     margin-top: 8rem;
     width: fit-content;
+    padding: 0.5rem;
+    background: rgba(42, 41, 41, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.background-transparent{
     padding: 0.5rem;
     background: rgba(42, 41, 41, 0.4);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -161,4 +169,36 @@ button.active{
 .detaljnije:hover{
     background-color: var(--secondary);
     border: 1px solid var(--secondary);
+}
+
+.contact-icon{
+    font-size: 1.5rem;
+    color: var(--dark-red);
+}
+
+.accent-brown{
+    color: var(--dark-red);
+}
+
+.info-text{
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+}
+
+.info-link{
+    color: var(--primary);
+    transition: all 0.3s ease;   
+}
+
+.info-link:hover{
+    color: var(--secondary);
+}
+
+.info-social{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.opis{
+    font-size: 1.2rem;
 }

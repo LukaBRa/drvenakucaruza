@@ -1,0 +1,26 @@
+
+:root{
+    --primary: #231f1e;
+    --secondary: #01e29e;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form input{
+    padding: 0.3rem;
+}
+
+form input[type="submit"]{
+    background-color: white;
+    margin-top: 0.5rem;
+    border: 1px solid var(--primary);
+    transition: all 0.3s;
+}
+
+form input[type="submit"]:hover{
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+}
