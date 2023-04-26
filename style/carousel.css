@@ -37,3 +37,10 @@
 .indicator-right{
     right: 0%;
 }
+
+@media only screen and (max-width: 968px) {
+    .ccarousel{
+        width: 100%;
+        height: 40vh;
+    }
+  }

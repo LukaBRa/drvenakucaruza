@@ -6,44 +6,134 @@
 
 nav{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 0px;
+    padding: 1rem 0rem;
 }
 
-ul{
+.nav-menu-lg ul{
     display: flex;
-    list-style: none;
-    color: white;
-    gap: 25px;
-    font-size: 1.1rem;
-    align-items: center;
+    list-style-type: none;
+    gap: 1.5rem;
 }
 
-ul li a{
+.nav-menu-lg ul li a{
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-ul li a:hover{
+.nav-menu-lg ul li a:hover{
     color: var(--secondary);
-    text-decoration: none;
 }
 
 .cta{
-    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
     padding: 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.cta:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--secondary);
+}
+
+.drop-button{
+    border: none;
+    background: none;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.drop-button:hover{
+    color: var(--secondary);
+}
+
+.drop-menu{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary);
+    width: 7rem;
+    margin-top: 0.5rem;
+}
+
+.drop-menu a{
+    padding: 0.5rem 0.5rem;
+}
+
+.drop-menu a:hover{
+    color: var(--secondary);
+}
+
+.nav-menu-sm{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.nav-menu-sm.visible{
+    display: flex;
+}
+
+.nav-menu-sm ul{
+    list-style-type: none;
+    margin-top: 0.5rem;
+}
+
+.nav-menu-sm ul li{
+    padding: 0.8rem 0rem;
+    text-align: center;
+}
+
+.nav-menu-sm ul li a{
     text-decoration: none;
     color: white;
     transition: all 0.3s ease;
 }
 
-.cta:hover{
-    border: 1px solid var(--secondary);
-    background-color: var(--secondary);
-    color: var(--primary);
+.nav-menu-sm ul li a:hover{
+    color: var(--secondary);
 }
+
+.drop-button-sm{
+    background: none;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.drop-button-sm:hover{
+    color: var(--secondary);
+}
+
+.drop-menu-sm{
+    display: none;
+    flex-direction: column;
+    padding: 1rem 0rem;
+    gap: 1rem;    
+}
+
+.toggle{
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+}
+
+.toggle:hover{
+    color: var(--secondary);
+}
+
 
 footer{
     background-color: var(--primary);
@@ -76,4 +166,14 @@ footer{
 
 footer .row{
     margin-top: 2rem;
+}
+
+@media only screen and (max-width: 990px) {
+    .nav-menu-lg{
+        display: none;
+    }    
+
+    .toggle{
+        display: block;
+    }
 }

@@ -18,17 +18,49 @@
         <div class="container-fluid nav-background">
             <div class="container-md">
                 <nav>
-                    <a href="index.html" class="website-logo"><img src="images/general/logo.PNG" alt="Drvena kuca Ruza" width="80" height="80"></a>
-                    <ul>
-                        <li><a href="index.html">POČETNA</a></li>
-                        <li><a href="apartmani.html">APARTMANI</a></li>
-                        <li><a href="spacentar.html">SPA</a></li>
-                        <li><a href="kontakt.html">KONTAKT</a></li>
-                        <li><a href="lokacija.html">LOKACIJA</a></li>
-                        <li><a href=""><i class="fa-solid fa-earth-europe"></i> LANGUAGE</a></li>
-                    </ul>
-                    <a href="kontakt.html" class="cta">REZERVIŠITE</a>
+                    <a href="index.html"><img src="images/general/logo.png" alt="Drvena kuća Ruža" width="80" height="80"></a>
+                    <div class="nav-menu-lg">
+                        <ul>
+                            <li><a href="index.html">POČETNA</a></li>
+                            <li><a href="apartmani.html">APARTMANI</a></li>
+                            <li><a href="spacentar.html">SPA</a></li>
+                            <li><a href="lokacija.html">LOKACIJA</a></li>
+                            <li><a href="kontakt.html">KONTAKT</a></li>
+                            <li>
+                                <button class="drop-button">
+                                    <i class="fa-solid fa-earth-europe"></i> LANGUAGE
+                                </button>
+                                <div class="drop-menu">
+                                    <a href=""><img src="images/general/gb.svg" alt="" width="20" height="20"> English</a>
+                                    <a href=""><img src="images/general/fr.svg" alt="" width="20" height="20"> Francais</a>
+                                    <a href=""><img src="images/general/ru.svg" alt="" width="20" height="20"> Russian</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="" class="cta">REZERVIŠITE</a>
+                    <button class="toggle"><i class="fa-solid fa-bars"></i></button>
                 </nav>
+    
+                <div class="nav-menu-sm">
+                    <ul>
+                        <li><a href="">POČETNA</a></li>
+                        <li><a href="">APARTMANI</a></li>
+                        <li><a href="">SPA</a></li>
+                        <li><a href="">LOKACIJA</a></li>
+                        <li><a href="">KONTAKT</a></li>
+                        <li>
+                            <button class="drop-button-sm">
+                                <i class="fa-solid fa-earth-europe"></i> LANGUAGE
+                            </button>
+                            <div class="drop-menu-sm">
+                                <a href=""><img src="images/general/gb.svg" alt="" width="20" height="20"> English</a>
+                                <a href=""><img src="images/general/fr.svg" alt="" width="20" height="20"> Francais</a>
+                                <a href=""><img src="images/general/ru.svg" alt="" width="20" height="20"> Russian</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -307,5 +339,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/apartmanislider.js"></script>
+    <script src="script/dropdown.js"></script>
 </body>
 </html>
