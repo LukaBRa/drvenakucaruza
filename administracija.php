@@ -43,11 +43,11 @@ $ap4Cena = Cenovnik::getCena("4");
         <div class="container-fluid nav-background">
             <div class="container-md">
                 <nav>
-                    <a href="index.html"><img src="images/general/logo.png" alt="Drvena kuća Ruža" width="80" height="80"></a>
+                    <a href="index.php"><img src="images/general/logo.png" alt="Drvena kuća Ruža" width="80" height="80"></a>
                     <div class="nav-menu-lg">
                         <ul>
-                            <li><a href="index.html">POČETNA</a></li>
-                            <li><a href="apartmani.html">APARTMANI</a></li>
+                            <li><a href="index.php">POČETNA</a></li>
+                            <li><a href="apartmani.php">APARTMANI</a></li>
                             <li><a href="spacentar.html">SPA</a></li>
                             <li><a href="lokacija.html">LOKACIJA</a></li>
                             <li><a href="kontakt.html">KONTAKT</a></li>
@@ -63,17 +63,17 @@ $ap4Cena = Cenovnik::getCena("4");
                             </li>
                         </ul>
                     </div>
-                    <a href="" class="cta">REZERVIŠITE</a>
+                    <a href="kontakt.html" class="cta">REZERVIŠITE</a>
                     <button class="toggle"><i class="fa-solid fa-bars"></i></button>
                 </nav>
     
                 <div class="nav-menu-sm">
                     <ul>
-                        <li><a href="">POČETNA</a></li>
-                        <li><a href="">APARTMANI</a></li>
-                        <li><a href="">SPA</a></li>
-                        <li><a href="">LOKACIJA</a></li>
-                        <li><a href="">KONTAKT</a></li>
+                        <li><a href="index.php">POČETNA</a></li>
+                        <li><a href="apartmani.php">APARTMANI</a></li>
+                        <li><a href="spacentar.html">SPA</a></li>
+                        <li><a href="lokacija.html">LOKACIJA</a></li>
+                        <li><a href="kontakt.html">KONTAKT</a></li>
                         <li>
                             <button class="drop-button-sm">
                                 <i class="fa-solid fa-earth-europe"></i> LANGUAGE
@@ -243,7 +243,7 @@ $ap4Cena = Cenovnik::getCena("4");
                         <form class="mt-5" action="php/controllers/deleteImages.php" method="post">
                             <h3>Slike</p>
                             <div class="slike">
-                                <?php foreach($ap3 as $apartman) { ?>
+                                <?php foreach($ap4 as $apartman) { ?>
                                     <div class="slika">
                                         <label for="<?php echo $apartman['id']; ?>">
                                             <img src="images/ap4/<?php echo $apartman['filename'] ; ?>" alt="Apartman 4" width="200" height="200">

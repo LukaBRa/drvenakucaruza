@@ -1,10 +1,17 @@
+<?php
+
+@require("php/models/ponuda.php");
+
+$specijalnaPonuda = Ponuda::getPonuda();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruža | Početna</title>
+    <title>Ruža | Home</title>
     <link rel="shortcut icon" href="images/general/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,43 +26,43 @@
         <div class="container-md">
             
             <nav>
-                <a href="home.html"><img src="images/general/logo.png" alt="Drvena kuća Ruža" width="80" height="80"></a>
+                <a href="homeEng.php"><img src="images/general/logo.png" alt="Drvena kuća Ruža" width="80" height="80"></a>
                 <div class="nav-menu-lg">
                     <ul>
-                        <li><a href="home.html">POČETNA</a></li>
-                        <li><a href="apartmani.html">APARTMANI</a></li>
-                        <li><a href="spacentar.html">SPA</a></li>
-                        <li><a href="lokacija.html">LOKACIJA</a></li>
-                        <li><a href="kontakt.html">KONTAKT</a></li>
+                        <li><a href="homeEng.php">HOME</a></li>
+                        <li><a href="apartments.php">APARTMENTS</a></li>
+                        <li><a href="spacenter.html">SPA</a></li>
+                        <li><a href="location.html">LOCATION</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                         <li>
                             <button class="drop-button">
                                 <i class="fa-solid fa-earth-europe"></i> LANGUAGE
                             </button>
                             <div class="drop-menu">
-                                <a href=""><img src="images/general/gb.svg" alt="" width="20" height="20"> English</a>
+                                <a href="index.php"><img src="images/general/rs.svg" alt="" width="20" height="20"> Serbian</a>
                                 <a href=""><img src="images/general/fr.svg" alt="" width="20" height="20"> Francais</a>
                                 <a href=""><img src="images/general/ru.svg" alt="" width="20" height="20"> Russian</a>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <a href="" class="cta">REZERVIŠITE</a>
+                <a href="kontakt.html" class="cta">RESERVATION</a>
                 <button class="toggle"><i class="fa-solid fa-bars"></i></button>
             </nav>
 
             <div class="nav-menu-sm">
                 <ul>
-                    <li><a href="">POČETNA</a></li>
-                    <li><a href="">APARTMANI</a></li>
-                    <li><a href="">SPA</a></li>
-                    <li><a href="">LOKACIJA</a></li>
-                    <li><a href="">KONTAKT</a></li>
+                    <li><a href="homeEng.php">POČETNA</a></li>
+                    <li><a href="apartments.php">APARTMANI</a></li>
+                    <li><a href="spacenter.html">SPA</a></li>
+                    <li><a href="location.html">LOKACIJA</a></li>
+                    <li><a href="contact.html">KONTAKT</a></li>
                     <li>
                         <button class="drop-button-sm">
                             <i class="fa-solid fa-earth-europe"></i> LANGUAGE
                         </button>
                         <div class="drop-menu-sm">
-                            <a href=""><img src="images/general/gb.svg" alt="" width="20" height="20"> English</a>
+                            <a href="index.php"><img src="images/general/gb.svg" alt="" width="20" height="20"> English</a>
                             <a href=""><img src="images/general/fr.svg" alt="" width="20" height="20"> Francais</a>
                             <a href=""><img src="images/general/ru.svg" alt="" width="20" height="20"> Russian</a>
                         </div>
@@ -68,18 +75,18 @@
                     <div class="col-lg-6 col-12">
                         <div class="">
                             <div class="name">
-                                <h1>DRVENA</h1>
-                                <h1>KUĆA</h1>
-                                <h1 id="name-accent">RUŽA</h1>
+                                <h1>WOODEN</h1>
+                                <h1>HOUSE</h1>
+                                <h1 id="name-accent">ROSE</h1>
                             </div>
                             <p class="header-location"><i class="fa-solid fa-location-dot"></i> Vikend naselje, Kopaonik</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
                         <div class="background-transparent p-5" style="border-radius: 10px;">
-                            <p class="fw-bold" style="color: white">SPECIJALNA PONUDA</p>
-                            <h1 class="mb-5" style="color: #e8d469;">PRVI MAJ NA KOPAONIKU</h1>
-                            <a href="kontakt.html" class="cta">DETALJNIJE</a>
+                            <p class="fw-bold" style="color: white">SPECIAL OFFER</p>
+                            <h1 class="mb-5" style="color: #e8d469;"><?php echo $specijalnaPonuda[0]['ponuda']; ?></h1>
+                            <a href="<?php echo $specijalnaPonuda[0]['link']; ?>" class="cta">DETAILS</a>
                             <p style="color: rgb(233, 233, 233);font-size: 1.2rem;" class="mt-4">Tel: 0641533372</p>
                         </div>
                     </div>
@@ -96,15 +103,15 @@
                 </div>
                 <div class="counter col-lg-2 col-md-3 col-6">
                     <p class="counter-accent">4</p>
-                    <p>APARTMANA</p>
+                    <p>APARTMENTS</p>
                 </div>
                 <div class="counter col-lg-2 col-md-3 col-6">
                     <p class="counter-accent">1</p>
-                    <p>VANJSKI ĐAKUZI</p>
+                    <p>OUTDOOR JACUZZI</p>
                 </div>
                 <div class="counter col-lg-2 col-md-3 col-6">
                     <p class="counter-accent">1</p>
-                    <p>SLANA SOBA</p>
+                    <p>SALT ROOM</p>
                 </div>
                 <div class="counter col-lg-2 col-md-3 col-6">
                     <p class="counter-accent">1</p>
@@ -112,7 +119,7 @@
                 </div>
                 <div class="counter col-lg-2 col-md-3 col-6">
                     <p class="counter-accent">1</p>
-                    <p>PARNO KUPATILO</p>
+                    <p>STEAM BATHROOM</p>
                 </div>
             </div>
         </div>
@@ -125,10 +132,10 @@
                     <img src="images/pocetna/apartmani.jpeg" alt="Elegantno uredjeni apartmani" class="img-fluid">
                 </div>
                 <div class="col-lg-6 section-apartmani mt-lg-0 mt-sm-5 mt-5">
-                    <p class="accent">DRVENA KUĆA RUŽA</p>
-                    <h1>ELEGANTNO <br> UREĐENI <br> APARTMANI</h1>
-                    <p>Smeštena u mirnom delu Vikend naselja, Drvena kuća Ruža je udaljena 500-600m od prvih marketa i restorana. Najbliža stanica ski busa je na 100m od kuće, a taksi prevoz je jednostavan i dostupan svakog trenutka.</p>
-                    <p>Objekat sadrži 4 zasebne smeštajne jedinice, spa centar, vanjski đakuzi i parking prostor pokriven video nadzorom. U prizemlju objekta se nalazi jedan studio i apartman sa zasebnom spavaćom sobom, dok se na spratu nalaze dva dupleks apartmana. Svi apartmani poseduju kablovsku televiziju i neograničeni internet.</p>
+                    <p class="accent">WOODEN HOUSE ROSE</p>
+                    <h1>ELEGANTLY <br> DECORATED <br> APARTMENTS</h1>
+                    <p>Located in a quiet part of the Weekend resort, Wooden House Rose is 500-600m away from the first markets ans restaurants. The nearest ski bus stop is 100m from the house, and taxi transport is easy and available at any time.</p>
+                    <p>The property features 4 separate accommodation units, a spa, an outdoor jacuzzi and a parking space covered by video surveillance. On the ground floor there is one studio and an apartment with a separate bedroom, while on the first floor there are two duplex apartments. All apartments have cable TV and unlimited internet.</p>
                 </div>
             </div>
         </div>
@@ -138,8 +145,8 @@
     <section>
         <div class="container-md">
             <div class="text-center pt-5">
-                <p class="accent mb-4 fw-bold">ISTAKNUTO</p>
-                <h1>RUŽINE USLUGE</h1>
+                <p class="accent mb-4 fw-bold">HIGHLIGHTS</p>
+                <h1>ROSE'S FACILITIES</h1>
             </div>
 
             <div class="row mt-5 g-3">
@@ -147,8 +154,8 @@
                     <div class="facility">
                         <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
                         <div class="facility-desc">
-                            <p class="fw-bold">Telefon</p>
-                            <p>Na usluzi smo 24/7</p>
+                            <p class="fw-bold">Phone</p>
+                            <p>We are at your service 24/7</p>
                         </div>
                     </div>
                 </div>
@@ -156,8 +163,8 @@
                     <div class="facility">
                         <div class="icon"><i class="fa-solid fa-hot-tub-person"></i></div>
                         <div class="facility-desc">
-                            <p class="fw-bold">Vanjski đakuzi</p>
-                            <p>Posebno dizajnire mlaznice tople vode</p>
+                            <p class="fw-bold">Outdoor jacuzzi</p>
+                            <p>Specially designed hot water nozzles</p>
                         </div>
                     </div>
                 </div>
@@ -165,8 +172,8 @@
                     <div class="facility">
                         <div class="icon"><i class="fa-solid fa-video"></i></div>
                         <div class="facility-desc">
-                            <p class="fw-bold">Video nadzor</p>
-                            <p>Kamere su ukljucene 24/7</p>
+                            <p class="fw-bold">Video surveillance</p>
+                            <p>The cameras are on 24/7</p>
                         </div>
                     </div>
                 </div>
@@ -174,8 +181,8 @@
                     <div class="facility">
                         <div class="icon"><i class="fa-solid fa-wind"></i></div>
                         <div class="facility-desc">
-                            <p class="fw-bold">Klima uređaji</p>
-                            <p>Svaki apartman sadrži individualno kontrolisano grejanje </p>
+                            <p class="fw-bold">Air conditioners</p>
+                            <p>Each apartment has individually controlled heating</p>
                         </div>
                     </div>
                 </div>
@@ -183,8 +190,8 @@
                     <div class="facility">
                         <div class="icon"><i class="fa-solid fa-wifi"></i></div>
                         <div class="facility-desc">
-                            <p class="fw-bold">Besplatan WiFi</p>
-                            <p>Surfujte internetom neograničeno</p>
+                            <p class="fw-bold">Free WiFi</p>
+                            <p>Surf the Internet unlimitedly</p>
                         </div>
                     </div>
                 </div>
@@ -192,8 +199,8 @@
                     <div class="facility">
                         <div class="icon"><i class="fa-solid fa-square-parking"></i></div>
                         <div class="facility-desc">
-                            <p class="fw-bold">Parking</p>
-                            <p>Dostupan za sve goste</p>
+                            <p class="fw-bold">Parking lot</p>
+                            <p>Available to all guests</p>
                         </div>
                     </div>
                 </div>
@@ -210,8 +217,8 @@
                     <div class="facility">
                         <div class="icon"><i class="fa-solid fa-spa"></i></div>
                         <div class="facility-desc">
-                            <p class="fw-bold">Spa centar</p>
-                            <p>Uvek je pravo vreme za spa</p>
+                            <p class="fw-bold">Spa center</p>
+                            <p>It's always the right time for a spa</p>
                         </div>
                     </div>
                 </div>
@@ -232,8 +239,8 @@
     <section class="background-lightbrown">
         <div class="container-md">
             <div class="text-center pt-5">
-                <p class="accent mb-4 fw-bold">RUŽA DETALJI</p>
-                <h1>PLANOVI APARTMANA</h1>
+                <p class="accent mb-4 fw-bold">ROSE DETAILS</p>
+                <h1>APARTMENT PLANS</h1>
             </div>
 
             <div class="button-row mt-5">
@@ -248,10 +255,10 @@
                     <div class="apartman-1">
                         <p class="apartman-povrsina">100 m<sup>2</sup></p>
                         <div class="apartman-row">
-                            <p>Smeštajni kapacitet 6+2</p>
+                            <p>Accommodation capacity 6+2</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Dnevni boravak, 3 sobe, 3 terase, kupatilo i wc</p>
+                            <p>Living room, 3 rooms, 3 terrace, bathroom and wc</p>
                         </div>
                         <div class="apartman-row">
                             <p>2 x <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/50/000000/external-bed-furniture-kiranshastry-solid-kiranshastry.png" width="40" height="40">
@@ -260,42 +267,42 @@
                             </p>
                         </div>
                         <div class="apartman-row">
-                            <p>Komplet opremljena kuhinja</p>
+                            <p>Completely equipped kitchen</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Smart TV (dnevni boravak / spavaća soba)</p>
+                            <p>Smart TV (living room / bedroom)</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Kablovska TV (dnevni boravak / spavaća soba)</p>
+                            <p>Cable TV (dnevni boravak / spavaća soba)</p>
                         </div>
                         <div class="apartman-row">
                             <p>WiFi</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Individualno kontrolisano grejanje + kamin</p>
+                            <p>Individually controlled heating + fireplace</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Bademantili, papuče, peškiri</p>
+                            <p>Bathrobes, slippers, towels</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Toaleterije, fen za kosu, kozmetičko ogledalo</p>
+                            <p>Hairdryer, cosmetic mirror</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Korišćenje SPA centra (parno kupatilo, đakuzi, sauna, slana soba)</p>
+                            <p>Use of the SPA center (steam bath, jacuzzi, sauna, salt room)</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Besplatan parking pokriven video nadzorom</p>
+                            <p>Free parking covered by video surveillance</p>
                         </div>
-                        <a href="#" class="detaljnije mt-5">SLIKE</a>
+                        <a href="apartments.php" class="detaljnije mt-5">IMAGES</a>
                     </div>
 
                     <div class="apartman-2" style="display: none;">
                         <p class="apartman-povrsina">100 m<sup>2</sup></p>
                         <div class="apartman-row">
-                            <p>Smeštajni kapacitet 6+2</p>
+                            <p>Living room, 3 rooms, 3 terrace, bathroom and wc</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Dnevni boravak, 3 sobe, 3 terase, kupatilo i wc</p>
+                            <p>Accommodation capacity 6+2</p>
                         </div>
                         <div class="apartman-row">
                             <p>
@@ -304,42 +311,42 @@
                             </p>
                         </div>
                         <div class="apartman-row">
-                            <p>Komplet opremljena kuhinja</p>
+                            <p>Completely equipped kitchen</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Smart TV (dnevni boravak / spavaća soba)</p>
+                            <p>Smart TV (living room / bedroom)</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Kablovska TV (dnevni boravak / spavaća soba)</p>
+                            <p>Cable TV</p>
                         </div>
                         <div class="apartman-row">
                             <p>WiFi</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Individualno kontrolisano grejanje + kamin</p>
+                            <p>Individually controlled heating + fireplace</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Bademantili, papuče, peškiri</p>
+                            <p>Bathrobes, slippers, towels</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Toaleterije, fen za kosu, kozmetičko ogledalo</p>
+                            <p>Hairdryer, cosmetic mirror</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Korišćenje SPA centra (parno kupatilo, đakuzi, sauna, slana soba)</p>
+                            <p>Use of the SPA center (steam bath, jacuzzi, sauna, salt room)</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Besplatan parking pokriven video nadzorom</p>
+                            <p>Free parking covered by video surveillance</p>
                         </div>
-                        <a href="#" class="detaljnije mt-5">SLIKE</a>
+                        <a href="apartments.php" class="detaljnije mt-5">IMAGES</a>
                     </div>
 
                     <div class="apartman-3" style="display: none;">
                         <p class="apartman-povrsina">42 m<sup>2</sup></p>
                         <div class="apartman-row">
-                            <p>Smeštajni kapacitet 4</p>
+                            <p>Accommodation capacity 4</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Dnevni boravak, 1 soba, kupatilo</p>
+                            <p>Living room, 1 room, bathroom</p>
                         </div>
                         <div class="apartman-row">
                             <p>
@@ -348,42 +355,42 @@
                             </p>
                         </div>
                         <div class="apartman-row">
-                            <p>Komplet opremljena kuhinja</p>
+                            <p>Completely equipped kitchen</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Smart TV (dnevni boravak / spavaća soba)</p>
+                            <p>Smart TV (living room)</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Kablovska TV (dnevni boravak / spavaća soba)</p>
+                            <p>Cable TV</p>
                         </div>
                         <div class="apartman-row">
                             <p>WiFi</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Individualno kontrolisano grejanje + kamin</p>
+                            <p>Individually controlled heating</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Bademantili, papuče, peškiri</p>
+                            <p>Hairdryer, cosmetic mirror</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Toaleterije, fen za kosu, kozmetičko ogledalo</p>
+                            <p>Bathrobes, slippers, towels</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Korišćenje SPA centra (parno kupatilo, đakuzi, sauna, slana soba)</p>
+                            <p>Use of the SPA center (steam bath, jacuzzi, sauna, salt room)</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Besplatan parking pokriven video nadzorom</p>
+                            <p>Free parking covered by video surveillance</p>
                         </div>
-                        <a href="#" class="detaljnije mt-5">SLIKE</a>
+                        <a href="apartments.php" class="detaljnije mt-5">IMAGES</a>
                     </div>
 
                     <div class="apartman-4" style="display: none;">
                         <p class="apartman-povrsina">24 m<sup>2</sup></p>
                         <div class="apartman-row">
-                            <p>Smeštajni kapacitet 3</p>
+                            <p>Accommodation capacity 3</p>
                         </div>
                         <div class="apartman-row">
-                            <p>1 prostorija, kupatilo</p>
+                            <p>1 room, bathroom</p>
                         </div>
                         <div class="apartman-row">
                             <p>
@@ -392,33 +399,33 @@
                             </p>
                         </div>
                         <div class="apartman-row">
-                            <p>Komplet opremljena kuhinja</p>
+                            <p>Completely equipped kitchen</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Smart TV (dnevni boravak / spavaća soba)</p>
+                            <p>Smart TV (living room)</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Kablovska TV (dnevni boravak / spavaća soba)</p>
+                            <p>Cable TV</p>
                         </div>
                         <div class="apartman-row">
                             <p>WiFi</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Individualno kontrolisano grejanje + kamin</p>
+                            <p>Individually controlled heating</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Bademantili, papuče, peškiri</p>
+                            <p>Bathrobes, slippers, towels</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Toaleterije, fen za kosu, kozmetičko ogledalo</p>
+                            <p>Hairdryer, cosmetic mirror</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Korišćenje SPA centra (parno kupatilo, đakuzi, sauna, slana soba)</p>
+                            <p>Use of the SPA center (steam bath, jacuzzi, sauna, salt room)</p>
                         </div>
                         <div class="apartman-row">
-                            <p>Besplatan parking pokriven video nadzorom</p>
+                            <p>Free parking covered by video surveillance</p>
                         </div>
-                        <a href="#" class="detaljnije mt-5">SLIKE</a>
+                        <a href="apartmani.php" class="detaljnije mt-5">IMAGES</a>
                     </div>
                     
                     </div>
@@ -434,8 +441,8 @@
     <section>
         <div class="container-md pb-5">
             <div class="text-center pt-5 pb-5">
-                <p class="accent mb-4 fw-bold">SLIKE I VIDEO SNIMCI</p>
-                <h1>RUŽIN ALBUM</h1>
+                <p class="accent mb-4 fw-bold">IMAGES AND VIDEOS</p>
+                <h1>ROSE'S ALBUM</h1>
             </div>
 
             <!-- Carousel -->
@@ -457,16 +464,14 @@
         <div class="container-md">
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <h1>Drvena kuća <span class="accent" style="font-family: 'Allura';">RUŽA</span></h1>
-                    <p>Možete nas pratiti na našim društvenim mrežama na linkovima ispod
-                        i nikada ne propustite naše nove objave</p>
+                    <h1>Wooden house <span class="accent" style="font-family: 'Allura';">ROSE</span></h1>
+                    <p>You can follow us on our social networks at the links below and never miss our new posts</p>
                     <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a><a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class="col-lg-6 col-12 text-end d-flex flex-column">
-                    <a href="#" class="footer-link">KONTAKT</a>
+                    <a href="#" class="footer-link">CONTACT</a>
                     <a href="mailto:drvenakucaruza@gmail.com" class="footer-link">drvenakucaruza@gmail.com</a>
                     <a href="tel:+381641533372" class="footer-link">064/15-333-72</a>
-                    <a href="login.html" class="footer-link">Administracija</a>
                 </div>
             </div>
         </div>

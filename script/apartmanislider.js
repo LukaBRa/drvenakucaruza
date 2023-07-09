@@ -84,8 +84,8 @@ $(document).ready(() => {
                     counter1 = 0;
                 }
                 slider1.style.backgroundImage = `url(${ap1Slike[counter1]})`;
-            });
-        }
+            }); 
+        } 
     })
 
     $.ajax({

@@ -174,7 +174,7 @@ button.active{
 
 .contact-icon{
     font-size: 1.5rem;
-    color: var(--dark-red);
+    color: var(--secondary);
 }
 
 .accent-brown{
@@ -202,6 +202,22 @@ button.active{
 
 .opis{
     font-size: 1.2rem;
+}
+
+#ap1-plan{
+    display: block;
+}
+
+#ap2-plan{
+    display: none;
+}
+
+#ap3-plan{
+    display: none;
+}
+
+#ap4-plan{
+    display: none;
 }
 
 /* Snow animation */

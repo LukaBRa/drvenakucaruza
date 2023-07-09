@@ -11,7 +11,7 @@
 
 .ccarousel{
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     position: relative;
 /*     background-image: url("../images/album/1.JPG");
  */    background-position: center;
@@ -38,9 +38,23 @@
     right: 0%;
 }
 
-@media only screen and (max-width: 968px) {
+@media only screen and (max-width: 990px) {
+    .ccarousel{
+        width: 100%;
+        height: 50vh;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
     .ccarousel{
         width: 100%;
         height: 40vh;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .ccarousel{
+        width: 100%;
+        height: 30vh;
     }
   }
